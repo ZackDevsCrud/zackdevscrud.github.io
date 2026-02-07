@@ -1,0 +1,154 @@
+* {
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #8886ff;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    background-color: #e7e7ff;
+}
+
+.content {
+    background-color: white;
+    margin: 0 10%;
+    padding-bottom: 50%;
+}
+
+.title {
+    width: 50%;
+    margin: 0 auto;
+    padding: 40px 0;
+    font-size: 50px;
+    text-align: center;
+}
+
+.section {
+    width: 60%;
+    border-color: #8886ff;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.settings, .result {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0);
+    font-size: 20px;
+}
+
+.result {
+  flex-basis: 40%;
+  background-color: white;
+  border-color: white;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.settings {
+    flex-basis: 60%;
+    background-color: #e7e7ff;
+    border-color: #e7e7ff;
+    border-radius: 5px;
+    border-style: solid;
+}
+
+.settings h2, .result h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.settings div {
+    display: flex;
+    margin: 10px;
+}
+
+.result div {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.result div p, .result div h3, .settings div p {
+    margin: 5px;
+}
+
+.settings2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result div p, .result div h3 {
+    text-align: center;
+}
+
+input {
+    width: 50px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #8886ff;
+    transition: 0.3s;
+}
+
+input:hover {
+    border-color: #53529b;
+    color: #53529b;
+}
+
+input[type="checkbox"]{
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #8886ff;
+  border-radius: 4px;
+  background: white;
+  display: inline-grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:hover{
+  border-color: #53529b;
+  background: #e7e7ff;
+}
+
+input[type="checkbox"]::before{
+  content: "";
+  width: 10px;
+  height: 10px;
+  transform: scale(0);
+  background: #8886ff;
+  border-radius: 2px;
+}
+
+input[type="checkbox"]:checked::before{
+  transform: scale(1);
+}
+
+.calculate {
+    display: block;
+    width: 125px;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+footer {
+    text-align: center;
+    background-color: #8886ff;
+    margin: 0 10%;
+}
+
+footer p {
+    color: white;
+    padding: 15px 0;
+    margin: 0;
+}

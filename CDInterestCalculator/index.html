@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CD Interest Calculator</title>
+        <link rel="stylesheet" href="./resources/css/index.css">
+        <script src="./resources/scripts/calculate.js" defer></script>
+    </head>
+
+    <body>
+        <div class="content">
+            <h1 class="title">CD Interest Calculator</h1>
+
+            <div class="section">
+                <div class="settings">
+                    <h2>Settings</h2>
+                    <div class="settings1">
+                        <p>CD Length: <input type="number" name="cdLength" value="6" min="1"></p>
+                        <p>Interest Rate: <input type="number" name="interestRate" value="3.5" min="1"></p>
+                        <p>Initial Deposit: <input type="number" name="initialDeposit" value="5000" min="1"></p>
+                        <p>Renewal Count: <input type="number" name="renewalCount" value="0" min="0"></p>
+                        <p>Renewal Deposit: <input type="number" name="renewalDeposit" value="0" min="0"></p>
+                    </div>
+                    <div class="settings2">
+                        <p>Roll Over Interest: <input type="checkbox" name="rollOverInterest" checked></p>
+                    </div>
+                    <input class="calculate" type="submit" value="Calculate">
+                </div>
+
+                <div class="result">
+                    <h2>Result</h2>
+                    <div>
+                        <p>Interest Earned: </p>
+                        <h3 class="interestEarned">$0</h3>
+                        <p>Ending Balance: </p>
+                        <h3 class="endingBalance">$0</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <footer>
+        <p>A Project Created By Zachary Harker; 2026</p>
+    </footer>
+</html>
