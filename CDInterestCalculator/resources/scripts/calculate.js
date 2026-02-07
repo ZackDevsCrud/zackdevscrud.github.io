@@ -12,7 +12,7 @@ function calculateData() {
     const renewalDeposit = Number(document.getElementsByName('renewalDeposit')[0].value);
     const rollOverInterest = document.getElementsByName('rollOverInterest')[0].checked;
 
-    let interestEarned = 0, endingBalance = 0, currentBalance = initialDeposit;
+    let interestEarned = 0, endingBalance = 0, currentBalance = initialDeposit, totalContributed = 0;
 
     for (let i = 0; i < renewalCount + 1; i++) {
         
@@ -29,7 +29,9 @@ function calculateData() {
     }
 
     endingBalance = currentBalance;
+    totalContributed = currentBalance - interestEarned;
 
+    document.getElementsByClassName('totalContributed')[0].innerHTML = '$' + totalContributed.toFixed(2);
     document.getElementsByClassName('interestEarned')[0].innerHTML = '$' + interestEarned.toFixed(2);
     document.getElementsByClassName('endingBalance')[0].innerHTML = '$' + endingBalance.toFixed(2);
 }
