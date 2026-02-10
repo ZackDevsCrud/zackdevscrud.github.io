@@ -14,11 +14,34 @@
                 <div class="settings">
                     <h2>Settings</h2>
                     <div class="settings1">
-                        <p>CD Length: <input type="number" name="cdLength" value="6" min="1"></p>
-                        <p>Interest Rate: <input type="number" name="interestRate" value="3.5" min="1"></p>
-                        <p>Initial Deposit: <input type="number" name="initialDeposit" value="5000" min="1"></p>
-                        <p>Renewal Count: <input type="number" name="renewalCount" value="0" min="0"></p>
-                        <p>Renewal Deposit: <input type="number" name="renewalDeposit" value="0" min="0"></p>
+                        <div class="setting">
+                            <p>CD Length: </p>
+                            <input type="number" name="cdLength" value="6" min="1" >
+                            <p class="unit">Months</p>
+                        </div>
+                        <div class="setting">
+                            <p>Interest Rate: </p>
+                            <input type="number" name="interestRate" value="3.5" >
+                            <p class="unit">Percent</p>
+                        </div>
+
+                        <div class="setting">
+                            <p>Initial Deposit: </p>
+                            <input type="number" name="initialDeposit" value="5000">
+                            <p class="unit">Amount</p>
+                        </div>
+                        
+                        <div class="setting">
+                            <p>Renewal Count: </p>
+                            <input type="number" name="renewalCount" value="0" >
+                            <p class="unit">Number</p>
+                        </div>
+
+                        <div class="setting">
+                            <p>Renewal Deposit: </p>
+                            <input type="number" name="renewalDeposit" value="0" >
+                            <p class="unit">Amount</p>
+                        </div>
                     </div>
                     <div class="settings2">
                         <p>Roll Over Interest: <input type="checkbox" name="rollOverInterest" checked></p>
@@ -38,10 +61,45 @@
                     </div>
                 </div>
             </div>
+
+            <div class="section" hidden>
+                <div class="settings">
+                    <div>
+                        <div class="setting">
+                            <p>CD Length: </p>
+                            <h3>5</h3>
+                        </div>
+                        
+                        <div class="setting">
+                            <p>Interest Rate: </p>
+                            <h3>5</h3>
+                        </div>
+
+                        <div class="setting">
+                            <p>Initial Deposit: </p>
+                            <h3>5</h3>
+                        </div>
+
+                        <div class="setting">
+                            <p>Renewal Count: </p>
+                            <h3>5</h3>
+                        </div>
+
+                        <div class="setting">
+                            <p>Renewal Deposit: </p>
+                            <h3>5</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="result">
+                    
+                </div>
+            </div>
         </div>
     </body>
 
     <footer>
-        <p>A Project Created By Zachary Harker; Last Updated February 7, 2026</p>
+        <p>A Project Created By Zachary Harker; Last Updated February 10, 2026</p>
     </footer>
 </html>
