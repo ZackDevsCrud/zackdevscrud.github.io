@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+h2 { font-size: 40px; }
+h3 { font-size: 30px; }
+h4 { font-size: 20px; }
+
+body {
+    background-color: #111;
+}
+
+.game {
+    width: 100%;
+    max-width: 430px;
+    height: 100vh;
+    margin: 0 auto;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.game::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 120vmax;
+    height: 120vmax;
+
+    background-image: url("../images/Background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform-origin: center;
+    animation: spin 60s linear infinite;
+
+    z-index: -1;
+}
+
+@keyframes spin {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.total-cookies {
+    position: absolute;
+    top: 50px;
+
+    width: 100%;
+    height: 90px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 5;
+}
+
+.info {
+    position: absolute;
+    bottom: 50px;
+
+    width: 100%;
+    height: 90px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 5;
+}
+
+.cookie-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 2;
+}
+
+.cookie {
+    height: 300px;
+    width: auto;
+    display: block;
+
+    transform-origin: center;
+    animation: alternate bob 1s ease-in-out infinite;
+    transition: height 0.1s;
+}
+
+@keyframes bob {
+    from { transform: rotate(-15deg); }
+    to { transform: rotate(15deg); }
+}
