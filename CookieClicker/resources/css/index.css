@@ -3,17 +3,9 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
-h2 {
-    font-size: 40px;
-}
-
-h3 {
-    font-size: 30px;;
-}
-
-h4 {
-    font-size: 20px;
-}
+h2 { font-size: 40px; }
+h3 { font-size: 30px; }
+h4 { font-size: 20px; }
 
 body {
     background-color: #111;
@@ -23,11 +15,14 @@ body {
     width: 100%;
     max-width: 430px;
     height: 100vh;
-    background-color: aqua;
     margin: 0 auto;
+
     background-image: url(../images/Background.jfif);
+    background-size: cover;
+    background-position: center;
 
     position: relative;
+    overflow: hidden;
 }
 
 .total-cookies {
@@ -44,22 +39,29 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    z-index: 5;
+}
+
+.cookie-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 2;
 }
 
 .cookie {
-    position: absolute;
     height: 300px;
-    top: 50%;
-    left: 50%;
+    width: auto;
+    display: block;
+
+    transform-origin: center;
     animation: spin 20s linear infinite;
-    transition: 0.1s;
+    transition: height 0.1s;
 }
 
 @keyframes spin {
-    from {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
 }
